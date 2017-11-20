@@ -13707,16 +13707,16 @@ exports.map = createMap;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_leaflet__);
 
 const rawLayers = Object.freeze({
-    osm: [
-        "Open Street Map",
-        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        "Map data © <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> contributors",
-    ],
     carto_dark: [
         "CartoDB dark",
         "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
         "© <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> \
       contributors © <a href=https://carto.com/attributions>CARTO</a>",
+    ],
+    osm: [
+        "Open Street Map",
+        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "Map data © <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> contributors",
     ],
     stamen_toner: [
         "Stamen Watercolor",
@@ -13823,7 +13823,7 @@ __WEBPACK_IMPORTED_MODULE_0_leaflet__["Marker"].prototype.options.icon = Object(
 const defaultOptions = Object.freeze({
     // @see https://en.wikipedia.org/wiki/Geographic_center_of_the_contiguous_United_States
     center: [39.833333, -98.583333],
-    layers: __WEBPACK_IMPORTED_MODULE_1__layers__["b" /* tileLayers */][0],
+    layers: __WEBPACK_IMPORTED_MODULE_1__layers__["a" /* namedTileLayers */]["Open Street Map"],
     maxZoom: 18,
     zoom: 5,
 });

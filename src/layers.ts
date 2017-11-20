@@ -8,16 +8,16 @@ import {
 } from "./types";
 
 const rawLayers: IRawNamedTileLayers = Object.freeze({
-  osm: [
-    "Open Street Map",
-    "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    "Map data © <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> contributors",
-  ],
   carto_dark: [
     "CartoDB dark",
     "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
     "© <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> \
       contributors © <a href=https://carto.com/attributions>CARTO</a>",
+  ],
+  osm: [
+    "Open Street Map",
+    "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "Map data © <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> contributors",
   ],
   stamen_toner: [
     "Stamen Watercolor",

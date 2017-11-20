@@ -7,7 +7,6 @@ import {
 } from "leaflet";
 import {
   namedTileLayers,
-  tileLayers,
 } from "./layers";
 import {
   ICustomLeafletEvent,
@@ -29,7 +28,7 @@ Marker.prototype.options.icon = icon({
 const defaultOptions = Object.freeze({
   // @see https://en.wikipedia.org/wiki/Geographic_center_of_the_contiguous_United_States
   center: [39.833333, -98.583333],
-  layers: tileLayers[0],
+  layers: namedTileLayers["Open Street Map"],
   maxZoom: 18,
   zoom: 5,
 });
