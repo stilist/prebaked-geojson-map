@@ -1,0 +1,48 @@
+{
+  "name": "prebaked-geojson-map",
+  "version": "1.0.0",
+  "main": "dist/index.min.js",
+  "author": "Jordan Cole <stilist@ratafia.info>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stilist/prebaked-geojson-map.git"
+  },
+  "keywords": [
+    "geojson",
+    "leaflet"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@types/leaflet": "^1.2.0",
+    "@types/node": "^8.0.0",
+    "awesome-typescript-loader": "^3.2.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-env": "^1.6.0",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.0",
+    "dts-bundle-webpack": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^1.1.0",
+    "leaflet": "^1.2.0",
+    "source-map-loader": "^0.2.0",
+    "style-loader": "^0.19.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.0",
+    "uglifyjs-webpack-plugin": "^1.1.0",
+    "url-loader": "^0.6.0",
+    "webpack": "^3.6.0"
+  },
+  "files": [
+    "dist/",
+    "!dist/index.css.map",
+    "example/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "npm run lint && webpack --progress --config config/webpack.js",
+    "buildwatch": "webpack --progress --watch --config config/webpack.js",
+    "lint": "tslint --config ./config/tslint.json --project ./config/tsconfig.json"
+  }
+}

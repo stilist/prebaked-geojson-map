@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <title>prebaked-geojson-map example</title>
+    <link rel=stylesheet href='../dist/index.css'>
+    <script src='../dist/index.js'></script>
+
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #000;
+}
+
+#map {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+    </style>
+  </head>
+
+  <body>
+    <script>
+// @see https://tools.ietf.org/html/rfc7946#section-1.5
+//
+// The `"properties"` are customized to reflect this library's built-in
+// handling for `"activity"`, `"color"`, and `"place": { "name": ___ }`.
+var data = {
+  "type": "FeatureCollection",
+  "features": [{
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": [102.0, 0.5]
+    },
+    "properties": {
+      "place": {
+        "name": "Example"
+      }
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "LineString",
+      "coordinates": [
+        [102.0, 0.0], [103.0, 1.0], [104.0, 0.0], [105.0, 1.0]
+      ]
+    },
+    "properties": {
+      "activity": "walking"
+    }
+  }, {
+    "type": "Feature",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [[
+        [100.0, 0.0], [101.0, 0.0], [101.0, 1.0], [100.0, 1.0], [100.0, 0.0]
+      ]]
+    },
+    "properties": {
+      "activity": "walking",
+      "color": "#33f"
+    }
+  }]
+};
+window.addEventListener('load', function () {
+  var plm = window.PrebakedLeafletMap;
+  var map = plm.add('map', {
+    center: [0, 100],
+  });
+  plm.renderPaths(data, map);
+  plm.renderPoints(data, map);
+});
+   </script>
+  </body>
+</html>
