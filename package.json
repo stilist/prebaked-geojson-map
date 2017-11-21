@@ -4,10 +4,15 @@
   "main": "dist/index.min.js",
   "author": "Jordan Cole <stilist@ratafia.info>",
   "license": "MIT",
+  "description": "This package makes it very easy to add GeoJSON data to a to a preconfigured Leaflet map.",
   "repository": {
     "type": "git",
     "url": "https://github.com/stilist/prebaked-geojson-map.git"
   },
+  "bugs": {
+    "url": "https://github.com/stilist/prebaked-geojson-map/issues"
+  },
+  "homepage": "https://github.com/stilist/prebaked-geojson-map#readme",
   "keywords": [
     "geojson",
     "leaflet"

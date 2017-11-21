@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Added
+- Add `LICENSE` file (was documented in `package.json`, but physical file was
+  missing)
+- Add `"description"`, `"bugs"`, `"homepage"` keys to `package.json`
+
 ## [1.0.1] - 2017-11-20
 ### Added
 - Link to `instant-map` example
@@ -24,4 +30,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial release
 
+[Unreleased]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.1...master
 [1.0.1]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.0...v1.0.1
