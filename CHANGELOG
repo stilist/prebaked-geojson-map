@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   missing)
 - Add `"description"`, `"bugs"`, `"homepage"` keys to `package.json`
 
+### Changed
+- Change default map view from continental United States to African pole of
+  inaccessibility
+
 ## [1.0.1] - 2017-11-21
 ### Added
 - Link to `instant-map` example

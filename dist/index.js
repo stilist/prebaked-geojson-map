@@ -13821,8 +13821,8 @@ __WEBPACK_IMPORTED_MODULE_0_leaflet__["Marker"].prototype.options.icon = Object(
     shadowUrl: __webpack_require__(/*! leaflet/dist/images/marker-shadow.png */ 8),
 });
 const defaultOptions = Object.freeze({
-    // @see https://en.wikipedia.org/wiki/Geographic_center_of_the_contiguous_United_States
-    center: [39.833333, -98.583333],
+    // @see https://en.wikipedia.org/wiki/Pole_of_inaccessibility#Africa
+    center: [5.65, 26.17],
     layers: __WEBPACK_IMPORTED_MODULE_1__layers__["a" /* namedTileLayers */]["Open Street Map"],
     maxZoom: 18,
     zoom: 5,
