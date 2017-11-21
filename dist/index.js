@@ -13923,12 +13923,13 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAQAAAAC
 
 const options = {
     style: (feature) => {
-        const activity = feature.properties.activity;
+        const properties = feature.properties || {};
+        const activity = properties.activity;
         let styleOptions = {};
         if (!activity) {
             return styleOptions;
         }
-        const color = feature.properties.color || __WEBPACK_IMPORTED_MODULE_1__path_styles__["a" /* colors */][activity] || "#fc0";
+        const color = properties.color || __WEBPACK_IMPORTED_MODULE_1__path_styles__["a" /* colors */][activity] || "#fc0";
         styleOptions = {
             color,
             opacity: 0.65,
@@ -13943,7 +13944,8 @@ const options = {
 function renderPaths(geojson, map) {
     const features = geojson.features;
     const grouped = features.reduce((memo, feature) => {
-        const key = feature.properties.activity || "default";
+        const properties = feature.properties || {};
+        const key = properties.activity || "default";
         if (!memo[key]) {
             memo[key] = [];
         }
@@ -14112,8 +14114,9 @@ const options = {
     filter: (feature) => feature.geometry.type === "Point",
     pointToLayer(feature, coordinates) {
         const mark = Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["marker"])(coordinates);
-        if (feature.properties.place.name) {
-            mark.bindPopup(feature.properties.place.name);
+        const properties = feature.properties || {};
+        if (properties.place && properties.place.name) {
+            mark.bindPopup(properties.place.name);
         }
         return mark;
     },

@@ -22,14 +22,15 @@ import {
 
 const options: GeoJSONOptions = {
   style: (feature: Feature<GeometryObject, ICustomProperties>) => {
-    const activity: string = feature.properties.activity;
+    const properties = feature.properties || {};
+    const activity: string = properties.activity;
     let styleOptions: PathOptions = {};
 
     if (!activity) {
       return styleOptions;
     }
 
-    const color = feature.properties.color || colors[activity] || "#fc0";
+    const color = properties.color || colors[activity] || "#fc0";
     styleOptions = {
       color,
       opacity: 0.65,
@@ -46,7 +47,8 @@ const options: GeoJSONOptions = {
 export default function renderPaths(geojson: FeatureCollection<GeometryObject, ICustomProperties>, map: Map) {
   const features = geojson.features;
   const grouped: IGroupedFeatures = features.reduce((memo: IGroupedFeatures, feature) => {
-    const key = feature.properties.activity || "default";
+    const properties = feature.properties || {};
+    const key = properties.activity || "default";
 
     if (!memo[key]) {
       memo[key] = [];

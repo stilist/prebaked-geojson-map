@@ -19,9 +19,10 @@ const options: GeoJSONOptions = {
   filter: (feature) => feature.geometry.type === "Point",
   pointToLayer(feature: Feature<GeometryObject, ICustomProperties>, coordinates) {
     const mark = marker(coordinates);
+    const properties = feature.properties || {};
 
-    if (feature.properties.place.name) {
-      mark.bindPopup(feature.properties.place.name);
+    if (properties.place && properties.place.name) {
+      mark.bindPopup(properties.place.name);
     }
 
     return mark;
