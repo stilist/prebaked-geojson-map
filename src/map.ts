@@ -1,6 +1,7 @@
 import {
   control,
   icon,
+  Layer,
   map,
   MapOptions,
   Marker,
@@ -55,8 +56,21 @@ function addMap(id: string = "map", options: MapOptions = {}) {
   // This is necessary because `control.layers(...)` always creates a new layer
   // control -- it's a better user experience to add *all* layers to a single
   // control.
+  const addedOverlayLayers: Layer[] = [];
   instance.on("addOverlayLayer", (event: ICustomLeafletEvent) => {
     layers.addOverlay(event.overlayLayer, event.key);
+    addedOverlayLayers.push(event.overlayLayer);
+  });
+  // There doesn't seem to be a way to determine what layers have been added to
+  // the control.
+  instance.on("resetOverlayLayers", () => {
+    for (const layer of addedOverlayLayers) {
+      layers.removeLayer(layer);
+      instance.removeLayer(layer);
+
+      const index = addedOverlayLayers.indexOf(layer);
+      addedOverlayLayers.splice(index, 1);
+    }
   });
 
   return instance;
