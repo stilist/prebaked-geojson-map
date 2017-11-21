@@ -21,7 +21,7 @@ module.exports = {
     path: path.resolve(__dirname, '..', 'dist'),
     pathinfo: true,
     publicPath: '/dist/',
-    library: 'PrebakedLeafletMap',
+    library: 'PrebakedGeoJSONMap',
     libraryTarget: 'umd',
     umdNamedDefine: true,
   },

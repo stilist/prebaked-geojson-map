@@ -70,12 +70,12 @@ var data = {
   }]
 };
 window.addEventListener('load', function () {
-  var plm = window.PrebakedLeafletMap;
-  var map = plm.add('map', {
+  var pgm = window.PrebakedGeoJSONMap;
+  var map = pgm.add('map', {
     center: [0, 100],
   });
-  plm.renderPaths(data, map);
-  plm.renderPoints(data, map);
+  pgm.renderPaths(data, map);
+  pgm.renderPoints(data, map);
 });
    </script>
   </body>

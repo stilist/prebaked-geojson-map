@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("PrebakedLeafletMap", [], factory);
+		define("PrebakedGeoJSONMap", [], factory);
 	else if(typeof exports === 'object')
-		exports["PrebakedLeafletMap"] = factory();
+		exports["PrebakedGeoJSONMap"] = factory();
 	else
-		root["PrebakedLeafletMap"] = factory();
+		root["PrebakedGeoJSONMap"] = factory();
 })(this, function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
