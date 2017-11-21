@@ -11,7 +11,6 @@ import {
 } from "./layers";
 import {
   ICustomLeafletEvent,
-  ICustomProperties,
 } from "./types";
 import {
   defaults,
