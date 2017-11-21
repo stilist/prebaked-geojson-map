@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.1] - 2017-11-20
+### Added
+- Link to `instant-map` example
+- Add documentation in `README`
+- Add `"resetOverlayLayers"` event listener
+
+### Changed
+- Add `.md` extension to `README`
+- Renamed UMD export from `PrebakedLeafletMap` to `PrebakedGeoJSONMap`
+  (`PrebakedLeafletMap` was the original name, but felt less accurate).
+  This is a breaking change, but this module doesn't have any users currently,
+  so it's just being marked as a patch release.
+
+### Fixed
+- Fix crashes for GeoJSON `Feature`s that don't include a `"properties"` key.
+
 ## 1.0.0 - 2017-11-20
 ### Added
 - Initial release
+
+[1.0.1]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.0...v1.0.1
