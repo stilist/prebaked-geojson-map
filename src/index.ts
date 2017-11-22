@@ -6,7 +6,6 @@ import {
 } from "leaflet";
 import {
   namedTileLayers,
-  tileLayers,
 } from "./layers";
 import add from "./map";
 import renderPaths from "./render_paths";
@@ -18,6 +17,5 @@ export {
   renderPaths,
   renderPoints,
   namedTileLayers,
-  tileLayers,
 };
 export default add;
