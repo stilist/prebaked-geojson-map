@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Adjusted tslint config to detect unused imports and variables
 - Adjusted `lint` script to automatically fix errors when possible
 
+### Removed
+- Removed `tileLayers` export from namespace -- instead, use `Object.values()`
+  on `namedTileLayers`
+
 ## [1.0.1] - 2017-11-21
 ### Added
 - Link to `instant-map` example

@@ -13698,8 +13698,8 @@ exports.map = createMap;
 /*!***********************!*\
   !*** ./src/layers.ts ***!
   \***********************/
-/*! exports provided: namedTileLayers, tileLayers */
-/*! exports used: namedTileLayers, tileLayers */
+/*! exports provided: namedTileLayers */
+/*! exports used: namedTileLayers */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13737,9 +13737,6 @@ const namedTileLayers = Object.keys(rawLayers)
 }, {});
 /* harmony export (immutable) */ __webpack_exports__["a"] = namedTileLayers;
 
-const tileLayers = Object.values(namedTileLayers);
-/* harmony export (immutable) */ __webpack_exports__["b"] = tileLayers;
-
 
 
 /***/ }),
@@ -13747,7 +13744,7 @@ const tileLayers = Object.values(namedTileLayers);
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! exports provided: add, addLayer, renderPaths, renderPoints, namedTileLayers, tileLayers, default */
+/*! exports provided: add, addLayer, renderPaths, renderPoints, namedTileLayers, default */
 /*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -13766,7 +13763,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderPaths", function() { return __WEBPACK_IMPORTED_MODULE_4__render_paths__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderPoints", function() { return __WEBPACK_IMPORTED_MODULE_5__render_points__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "namedTileLayers", function() { return __WEBPACK_IMPORTED_MODULE_2__layers__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "tileLayers", function() { return __WEBPACK_IMPORTED_MODULE_2__layers__["b"]; });
 // @note Import extra files so Webpack knows about them.
 
 

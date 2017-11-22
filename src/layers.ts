@@ -1,6 +1,5 @@
 import {
   Control,
-  Layer,
   tileLayer,
 } from "leaflet";
 import {
@@ -38,5 +37,3 @@ export const namedTileLayers: Control.LayersObject = Object.keys(rawLayers)
 
     return memo;
   }, {});
-
-export const tileLayers: Layer[] = Object.values(namedTileLayers);
