@@ -4,7 +4,6 @@ import {
   GeometryObject,
 } from "geojson";
 import {
-  Control,
   geoJSON,
   GeoJSONOptions,
   layerGroup,
@@ -58,7 +57,6 @@ export default function renderPaths(geojson: FeatureCollection<GeometryObject, I
     return memo;
   }, {});
 
-  const layers: Control.LayersObject = {};
   for (const key of Object.keys(grouped)) {
     const groupedFeatures: Array<Feature<GeometryObject, ICustomProperties>> = grouped[key];
 

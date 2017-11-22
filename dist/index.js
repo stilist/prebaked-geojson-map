@@ -13964,7 +13964,6 @@ function renderPaths(geojson, map) {
         memo[key].push(feature);
         return memo;
     }, {});
-    const layers = {};
     for (const key of Object.keys(grouped)) {
         const groupedFeatures = grouped[key];
         const filtered = groupedFeatures.filter((feature) => feature.geometry.type !== "Point");

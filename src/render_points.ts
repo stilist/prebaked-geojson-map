@@ -1,7 +1,6 @@
 import {
   Feature,
   FeatureCollection,
-  GeoJsonObject,
   GeometryObject,
 } from "geojson";
 import {
@@ -12,7 +11,6 @@ import {
 } from "leaflet";
 import {
   ICustomProperties,
-  IGroupedFeatures,
 } from "./types";
 
 const options: GeoJSONOptions = {

@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Change default map view from continental United States to African pole of
   inaccessibility
+- Adjusted tslint config to detect unused imports and variables
+- Adjusted `lint` script to automatically fix errors when possible
 
 ## [1.0.1] - 2017-11-21
 ### Added
