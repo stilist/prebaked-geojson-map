@@ -13747,7 +13747,7 @@ const tileLayers = Object.values(namedTileLayers);
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! exports provided: add, renderPaths, renderPoints, namedTileLayers, tileLayers, default */
+/*! exports provided: add, addLayer, renderPaths, renderPoints, namedTileLayers, tileLayers, default */
 /*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -13755,15 +13755,18 @@ const tileLayers = Object.values(namedTileLayers);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_css__ = __webpack_require__(/*! ./index.css */ 3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layers__ = __webpack_require__(/*! ./layers */ 1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__map__ = __webpack_require__(/*! ./map */ 5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__render_paths__ = __webpack_require__(/*! ./render_paths */ 9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__render_points__ = __webpack_require__(/*! ./render_points */ 11);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "add", function() { return __WEBPACK_IMPORTED_MODULE_2__map__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderPaths", function() { return __WEBPACK_IMPORTED_MODULE_3__render_paths__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderPoints", function() { return __WEBPACK_IMPORTED_MODULE_4__render_points__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "namedTileLayers", function() { return __WEBPACK_IMPORTED_MODULE_1__layers__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "tileLayers", function() { return __WEBPACK_IMPORTED_MODULE_1__layers__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_leaflet__ = __webpack_require__(/*! leaflet */ 0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_leaflet__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layers__ = __webpack_require__(/*! ./layers */ 1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__map__ = __webpack_require__(/*! ./map */ 5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__render_paths__ = __webpack_require__(/*! ./render_paths */ 9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__render_points__ = __webpack_require__(/*! ./render_points */ 11);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "add", function() { return __WEBPACK_IMPORTED_MODULE_3__map__["a"]; });
+/* harmony reexport (binding) */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_1_leaflet__, "tileLayer")) __webpack_require__.d(__webpack_exports__, "addLayer", function() { return __WEBPACK_IMPORTED_MODULE_1_leaflet__["tileLayer"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderPaths", function() { return __WEBPACK_IMPORTED_MODULE_4__render_paths__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderPoints", function() { return __WEBPACK_IMPORTED_MODULE_5__render_points__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "namedTileLayers", function() { return __WEBPACK_IMPORTED_MODULE_2__layers__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "tileLayers", function() { return __WEBPACK_IMPORTED_MODULE_2__layers__["b"]; });
 // @note Import extra files so Webpack knows about them.
 
 
@@ -13771,7 +13774,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_2__map__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_3__map__["a" /* default */]);
 
 
 /***/ }),

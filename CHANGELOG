@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   missing)
 - Add `"description"`, `"bugs"`, `"homepage"` keys to `package.json`
 - Add `"addBaseLayer"` event listener
+- Export Leaflet's `tileLayer` method as `addLayer`
 
 ### Changed
 - Change default map view from continental United States to African pole of

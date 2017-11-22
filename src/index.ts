@@ -2,6 +2,9 @@
 import "./index.css";
 
 import {
+  tileLayer,
+} from "leaflet";
+import {
   namedTileLayers,
   tileLayers,
 } from "./layers";
@@ -11,6 +14,7 @@ import renderPoints from "./render_points";
 
 export {
   add,
+  tileLayer as addLayer,
   renderPaths,
   renderPoints,
   namedTileLayers,
