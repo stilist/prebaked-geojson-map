@@ -2,7 +2,7 @@
   "name": "prebaked-geojson-map",
   "version": "1.0.1",
   "main": "dist/index.min.js",
-  "author": "Jordan Cole <stilist@ratafia.info>",
+  "author": "Jordan Cole <code@ratafia.info>",
   "license": "MIT",
   "description": "This package makes it very easy to add GeoJSON data to a to a preconfigured Leaflet map.",
   "repository": {

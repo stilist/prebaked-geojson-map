@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   inaccessibility
 - Adjusted tslint config to detect unused imports and variables
 - Adjusted `lint` script to automatically fix errors when possible
+- Change author email address
 
 ### Removed
 - Removed `tileLayers` export from namespace -- instead, use `Object.values()`
