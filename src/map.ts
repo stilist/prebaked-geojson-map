@@ -60,6 +60,9 @@ function addMap(id: string = "map", options: MapOptions = {}) {
     layers.addOverlay(event.overlayLayer, event.key);
     addedOverlayLayers.push(event.overlayLayer);
   });
+  instance.on("addBaseLayer", (event: ICustomLeafletEvent) => {
+    layers.addBaseLayer(event.baseLayer, event.key);
+  });
   // There doesn't seem to be a way to determine what layers have been added to
   // the control.
   instance.on("resetOverlayLayers", () => {
