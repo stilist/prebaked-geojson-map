@@ -18,4 +18,3 @@ export {
   renderPoints,
   namedTileLayers,
 };
-export default add;

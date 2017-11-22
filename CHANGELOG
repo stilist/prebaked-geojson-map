@@ -21,6 +21,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - Removed `tileLayers` export from namespace -- instead, use `Object.values()`
   on `namedTileLayers`
+- Removed `add` as default export -- call `.add` explicitly
 
 ## [1.0.1] - 2017-11-21
 ### Added

@@ -13744,7 +13744,7 @@ const namedTileLayers = Object.keys(rawLayers)
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! exports provided: add, addLayer, renderPaths, renderPoints, namedTileLayers, default */
+/*! exports provided: add, addLayer, renderPaths, renderPoints, namedTileLayers */
 /*! all exports used */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -13771,7 +13771,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (__WEBPACK_IMPORTED_MODULE_3__map__["a" /* default */]);
 
 
 /***/ }),
