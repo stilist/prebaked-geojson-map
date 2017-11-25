@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Add `.md` extension to `CHANGELOG`
 
 ## [1.0.4] - 2017-11-25
 ### Added
