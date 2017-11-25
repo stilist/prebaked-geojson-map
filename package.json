@@ -1,6 +1,6 @@
 {
   "name": "prebaked-geojson-map",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/index.min.js",
   "author": "Jordan Cole <code@ratafia.info>",
   "license": "MIT",
