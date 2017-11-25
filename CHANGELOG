@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Use supercluster plugin to cluster points together (leaflet.markercluster and
+  PruneCluster have better UX, but I couldn’t get them to work correctly with
+  Webpack and TypeScript -- and supercluster works much faster than
+  leaflet.markercluster)
 
 ## [1.0.2] - 2017-11-21
 ### Added
