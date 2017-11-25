@@ -1,6 +1,6 @@
 {
   "name": "prebaked-geojson-map",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.min.js",
   "author": "Jordan Cole <code@ratafia.info>",
   "license": "MIT",
@@ -37,7 +37,7 @@
     "supercluster": "^3.0.0",
     "tslint": "^5.8.0",
     "typescript": "^2.5.0",
-    "uglifyjs-webpack-plugin": "^1.1.0",
+    "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.6.0",
     "webpack": "^3.6.0"
   },
