@@ -8,11 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Add `.md` extension to `CHANGELOG`
 
+### Fixed
+- Fix `##` that should be `###` in change log
+
 ## [1.0.4] - 2017-11-25
 ### Added
 - Add supercluster CSS to style clusters
 
-## Fixed
+### Fixed
 - Fix bad copy/paste for link to 1.0.3 changes
 
 ## [1.0.3] - 2017-11-25
