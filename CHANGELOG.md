@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Fix `##` that should be `###` in change log
+- Fix several minor copy errors
 
 ## [1.0.4] - 2017-11-25
 ### Added

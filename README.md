@@ -33,12 +33,12 @@ The `Map` instance returned by `.add` has some custom [event listeners] that
 work around limitations in Leaflet’s API:
 
 * `"addBaseLayer"` allows you to add a new base `Layer` to the existing
-  [layers control]. Leaflet’s API only allows you to add a new overlay layer by
+  [layers control]. Leaflet’s API only allows you to add new layers by
   calling [`L.control.layers`][new layers control], which will always add
-  another layers control. Use it like
+  a new control. Use it like
   `map.fire("addBaseLayer", { baseLayer: layer, key: 'foo' });`.
 * `"addOverlayLayer"` allows you to add a new `Layer` or `LayerGroup` overlay
-  to the existing [layers control]. Use it like
+  to the existing layers control. Use it like
   `map.fire("addOverlayLayer", { overlayLayer: layer, key: 'foo' });`.
 * `"resetOverlayLayers"` allows you to remove all the overlay layers from the
   layers control. Use it like `map.fire("resetOverlayLayers")`. Note that this
