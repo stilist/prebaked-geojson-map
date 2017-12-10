@@ -1,4 +1,5 @@
 var path = require('path')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ZopfliPlugin = require('zopfli-webpack-plugin')
@@ -79,6 +80,7 @@ module.exports = {
 
   devtool: 'source-map',
   plugins: [
+    new BundleAnalyzerPlugin(),
     new ExtractTextPlugin('index.css'),
     new UglifyJSPlugin({
       include: /\.min\.js$/,

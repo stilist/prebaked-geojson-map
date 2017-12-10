@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Add gzip-compressed version of `dist/` files
+- Add webpack-bundle-analyzer plugin
 
 ### Changed
 - Add `.md` extension to `CHANGELOG`
