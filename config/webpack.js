@@ -7,7 +7,7 @@ const ZopfliPlugin = require('zopfli-webpack-plugin')
 const regions = 'AF AN AS EU NA OC SA WW'.split(' ')
 const browserlist = regions.map(region => `> 5% in alt-${region}`)
 
-module.exports = {
+const config = {
   entry: {
     'index': './src/index.ts',
     'index.min': './src/index.ts',
@@ -74,7 +74,6 @@ module.exports = {
 
   devtool: 'source-map',
   plugins: [
-    new BundleAnalyzerPlugin(),
     new ExtractTextPlugin('index.css'),
     new UglifyJSPlugin({
       include: /\.min\.js$/,
@@ -89,3 +88,9 @@ module.exports = {
     }),
   ],
 }
+
+if (process.env.WEBPACK_ANALYZE === 'true') {
+  config.plugins.push(new BundleAnalyzerPlugin())
+}
+
+module.exports = config
