@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Changed
 - Add `.md` extension to `CHANGELOG`
+- Update npm dependencies
 
 ### Fixed
 - Fix `##` that should be `###` in change log
