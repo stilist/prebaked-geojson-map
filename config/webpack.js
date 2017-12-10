@@ -4,14 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ZopfliPlugin = require('zopfli-webpack-plugin')
 
-// Each vendor has a different release schedule, but this list
-//   represents approximately one year of releases.
-const browserlist = Object.freeze([
-  'last 8 Chrome major versions',
-  'last 4 Edge major versions',
-  'last 8 Firefox major versions',
-  'last Safari major version',
-])
+const regions = 'AF AN AS EU NA OC SA WW'.split(' ')
+const browserlist = regions.map(region => `> 5% in alt-${region}`)
 
 module.exports = {
   entry: {
