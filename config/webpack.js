@@ -1,6 +1,7 @@
 var path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const ZopfliPlugin = require('zopfli-webpack-plugin')
 
 // Each vendor has a different release schedule, but this list
 //   represents approximately one year of releases.
@@ -82,6 +83,13 @@ module.exports = {
     new UglifyJSPlugin({
       include: /\.min\.js$/,
       sourceMap: true,
+    }),
+    new ZopfliPlugin({
+        asset: '[path].gz[query]',
+        algorithm: 'zopfli',
+        test: /\.(css|js|map)$/,
+        threshold: 10240,
+        minRatio: 0.8
     }),
   ],
 }

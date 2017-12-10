@@ -39,7 +39,8 @@
     "typescript": "^2.6.2",
     "uglifyjs-webpack-plugin": "^1.1.2",
     "url-loader": "^0.6.0",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "zopfli-webpack-plugin": "^0.1.0"
   },
   "files": [
     "dist/",
