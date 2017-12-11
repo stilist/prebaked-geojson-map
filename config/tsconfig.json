@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
+    "module": "esnext",
+    "noImplicitAny": true,
     "outDir": "../dist/",
     "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "esnext",
     "target": "es2017"
   },
   "include": [
