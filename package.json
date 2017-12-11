@@ -45,7 +45,7 @@
   },
   "files": [
     "dist/",
-    "!dist/index.css.map",
+    "!dist/index.css.map*",
     "example/",
     "src/"
   ],
