@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add `.md` extension to `CHANGELOG`
 - Update npm dependencies
 - Move browserslist config outside webpack config
+- Move Babel config outside webpack config
 
 ### Fixed
 - Fix `##` that should be `###` in change log

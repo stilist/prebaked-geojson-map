@@ -56,5 +56,8 @@
     "build:release": "NODE_ENV=production npm run build",
     "build:watch": "npm run build -- --watch",
     "lint": "tslint --fix --config ./config/tslint.json --project ./config/tsconfig.json"
+  },
+  "babel": {
+    "extends": "./config/babel.json"
   }
 }

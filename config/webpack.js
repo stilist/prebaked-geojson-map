@@ -33,6 +33,7 @@ const config = {
         loader: 'awesome-typescript-loader',
         options: {
           configFileName: 'config/tsconfig.json',
+          useBabel: true,
         },
       }],
     }, {
