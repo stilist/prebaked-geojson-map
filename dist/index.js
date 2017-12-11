@@ -79,7 +79,7 @@ return /******/ (function(modules) { // webpackBootstrap
   !*** ./node_modules/leaflet/dist/leaflet-src.js ***!
   \**************************************************/
 /*! dynamic exports provided */
-/*! exports used: Marker, control, divIcon, geoJSON, icon, layerGroup, map, marker, point, tileLayer */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* @preserve
@@ -13698,80 +13698,86 @@ exports.map = createMap;
 /*!***********************!*\
   !*** ./src/layers.ts ***!
   \***********************/
-/*! exports provided: namedTileLayers */
-/*! exports used: namedTileLayers */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet__ = __webpack_require__(/*! leaflet */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_leaflet__);
 
-const rawLayers = Object.freeze({
-    carto_dark: [
-        "CartoDB dark",
-        "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
-        "© <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> \
-      contributors © <a href=https://carto.com/attributions>CARTO</a>",
-    ],
-    osm: [
-        "Open Street Map",
-        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        "Map data © <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> contributors",
-    ],
-    stamen_toner: [
-        "Stamen Watercolor",
-        "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png",
-        "Map tiles by <a href=http://stamen.com>Stamen Design</a>, under \
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.namedTileLayers = undefined;
+
+var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+
+var _leaflet = __webpack_require__(/*! leaflet */ 0);
+
+var rawLayers = Object.freeze({
+    carto_dark: ["CartoDB dark", "http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png", "© <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> \
+      contributors © <a href=https://carto.com/attributions>CARTO</a>"],
+    osm: ["Open Street Map", "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", "Map data © <a href=http://www.openstreetmap.org/copyright>OpenStreetMap</a> contributors"],
+    stamen_toner: ["Stamen Watercolor", "https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png", "Map tiles by <a href=http://stamen.com>Stamen Design</a>, under \
       <a href=http://creativecommons.org/licenses/by/3.0>CC BY 3.0</a>. Data \
       by <a href=http://openstreetmap.org>OpenStreetMap</a>, under \
-      <a href=http://www.openstreetmap.org/copyright>ODbL</a>.",
-    ],
+      <a href=http://www.openstreetmap.org/copyright>ODbL</a>."]
 });
-const namedTileLayers = Object.keys(rawLayers)
-    .reduce((memo, key) => {
-    const [name, urlTemplate, attribution] = rawLayers[key];
-    memo[name] = Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["tileLayer"])(urlTemplate, {
-        attribution,
+var namedTileLayers = exports.namedTileLayers = Object.keys(rawLayers).reduce(function (memo, key) {
+    var _rawLayers$key = _slicedToArray(rawLayers[key], 3),
+        name = _rawLayers$key[0],
+        urlTemplate = _rawLayers$key[1],
+        attribution = _rawLayers$key[2];
+
+    memo[name] = (0, _leaflet.tileLayer)(urlTemplate, {
+        attribution: attribution
     });
     return memo;
 }, {});
-/* harmony export (immutable) */ __webpack_exports__["a"] = namedTileLayers;
-
-
 
 /***/ }),
 /* 2 */
 /*!**********************!*\
   !*** ./src/index.ts ***!
   \**********************/
-/*! exports provided: add, addLayer, renderPaths, renderPoints, namedTileLayers */
+/*! dynamic exports provided */
 /*! all exports used */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_css__ = __webpack_require__(/*! ./index.css */ 3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__index_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_leaflet__ = __webpack_require__(/*! leaflet */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_leaflet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__layers__ = __webpack_require__(/*! ./layers */ 1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__map__ = __webpack_require__(/*! ./map */ 5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__render_paths__ = __webpack_require__(/*! ./render_paths */ 9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__render_points__ = __webpack_require__(/*! ./render_points */ 11);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "add", function() { return __WEBPACK_IMPORTED_MODULE_3__map__["a"]; });
-/* harmony reexport (binding) */ if(__webpack_require__.o(__WEBPACK_IMPORTED_MODULE_1_leaflet__, "tileLayer")) __webpack_require__.d(__webpack_exports__, "addLayer", function() { return __WEBPACK_IMPORTED_MODULE_1_leaflet__["tileLayer"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderPaths", function() { return __WEBPACK_IMPORTED_MODULE_4__render_paths__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "renderPoints", function() { return __WEBPACK_IMPORTED_MODULE_5__render_points__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "namedTileLayers", function() { return __WEBPACK_IMPORTED_MODULE_2__layers__["a"]; });
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.namedTileLayers = exports.renderPoints = exports.renderPaths = exports.addLayer = exports.add = undefined;
+
+__webpack_require__(/*! ./index.css */ 3);
+
+var _leaflet = __webpack_require__(/*! leaflet */ 0);
+
+var _layers = __webpack_require__(/*! ./layers */ 1);
+
+var _map = __webpack_require__(/*! ./map */ 5);
+
+var _map2 = _interopRequireDefault(_map);
+
+var _render_paths = __webpack_require__(/*! ./render_paths */ 9);
+
+var _render_paths2 = _interopRequireDefault(_render_paths);
+
+var _render_points = __webpack_require__(/*! ./render_points */ 11);
+
+var _render_points2 = _interopRequireDefault(_render_points);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 // @note Import extra files so Webpack knows about them.
-
-
-
-
-
-
-
-
+exports.add = _map2.default;
+exports.addLayer = _leaflet.tileLayer;
+exports.renderPaths = _render_paths2.default;
+exports.renderPoints = _render_points2.default;
+exports.namedTileLayers = _layers.namedTileLayers;
 
 /***/ }),
 /* 3 */
@@ -13779,6 +13785,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   !*** ./src/index.css ***!
   \***********************/
 /*! dynamic exports provided */
+/*! all exports used */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
@@ -13799,35 +13806,43 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAApCAYAAADA
 /*!********************!*\
   !*** ./src/map.ts ***!
   \********************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet__ = __webpack_require__(/*! leaflet */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_leaflet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__layers__ = __webpack_require__(/*! ./layers */ 1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils__ = __webpack_require__(/*! ./utils */ 6);
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _leaflet = __webpack_require__(/*! leaflet */ 0);
+
+var _layers = __webpack_require__(/*! ./layers */ 1);
+
+var _utils = __webpack_require__(/*! ./utils */ 6);
 
 // Fix image URL lookup for Webpack.
 //
 // @see https://github.com/Leaflet/Leaflet/issues/4968
-__WEBPACK_IMPORTED_MODULE_0_leaflet__["Marker"].prototype.options.icon = Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["icon"])({
+_leaflet.Marker.prototype.options.icon = (0, _leaflet.icon)({
     iconRetinaUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon-2x.png */ 7),
     iconUrl: __webpack_require__(/*! leaflet/dist/images/marker-icon.png */ 4),
-    shadowUrl: __webpack_require__(/*! leaflet/dist/images/marker-shadow.png */ 8),
+    shadowUrl: __webpack_require__(/*! leaflet/dist/images/marker-shadow.png */ 8)
 });
-const defaultOptions = Object.freeze({
+var defaultOptions = Object.freeze({
     // @see https://en.wikipedia.org/wiki/Pole_of_inaccessibility#Africa
     center: [5.65, 26.17],
-    layers: __WEBPACK_IMPORTED_MODULE_1__layers__["a" /* namedTileLayers */]["Open Street Map"],
+    layers: _layers.namedTileLayers["Open Street Map"],
     maxZoom: 18,
-    zoom: 5,
+    zoom: 5
 });
-function addMap(id = "map", options = {}) {
-    let el = document.getElementById(id);
+function addMap() {
+    var id = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "map";
+    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    var el = document.getElementById(id);
     if (el === null) {
         el = document.createElement("div");
         el.setAttribute("id", id);
@@ -13841,61 +13856,112 @@ function addMap(id = "map", options = {}) {
     // @see https://github.com/DefinitelyTyped/DefinitelyTyped/issues/19153
     // @see https://github.com/lodash/lodash/issues/3192
     // @see https://stackoverflow.com/q/39415661/672403
-    const mergedOptions = Object(__WEBPACK_IMPORTED_MODULE_2__utils__["a" /* defaults */])(options, defaultOptions);
-    const instance = Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["map"])(el, mergedOptions);
-    const layers = __WEBPACK_IMPORTED_MODULE_0_leaflet__["control"].layers(__WEBPACK_IMPORTED_MODULE_1__layers__["a" /* namedTileLayers */]).addTo(instance);
+    var mergedOptions = (0, _utils.defaults)(options, defaultOptions);
+    var instance = (0, _leaflet.map)(el, mergedOptions);
+    var layers = _leaflet.control.layers(_layers.namedTileLayers).addTo(instance);
     // This is necessary because `control.layers(...)` always creates a new layer
     // control -- it's a better user experience to add *all* layers to a single
     // control.
-    const addedOverlayLayers = [];
-    instance.on("addOverlayLayer", (event) => {
+    var addedOverlayLayers = [];
+    instance.on("addOverlayLayer", function (event) {
         layers.addOverlay(event.overlayLayer, event.key);
         addedOverlayLayers.push(event.overlayLayer);
     });
-    instance.on("addBaseLayer", (event) => {
+    instance.on("addBaseLayer", function (event) {
         layers.addBaseLayer(event.baseLayer, event.key);
     });
     // There doesn't seem to be a way to determine what layers have been added to
     // the control.
-    instance.on("resetOverlayLayers", () => {
-        for (const layer of addedOverlayLayers) {
-            layers.removeLayer(layer);
-            instance.removeLayer(layer);
-            const index = addedOverlayLayers.indexOf(layer);
-            addedOverlayLayers.splice(index, 1);
+    instance.on("resetOverlayLayers", function () {
+        var _iteratorNormalCompletion = true;
+        var _didIteratorError = false;
+        var _iteratorError = undefined;
+
+        try {
+            for (var _iterator = addedOverlayLayers[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                var layer = _step.value;
+
+                layers.removeLayer(layer);
+                instance.removeLayer(layer);
+                var index = addedOverlayLayers.indexOf(layer);
+                addedOverlayLayers.splice(index, 1);
+            }
+        } catch (err) {
+            _didIteratorError = true;
+            _iteratorError = err;
+        } finally {
+            try {
+                if (!_iteratorNormalCompletion && _iterator.return) {
+                    _iterator.return();
+                }
+            } finally {
+                if (_didIteratorError) {
+                    throw _iteratorError;
+                }
+            }
         }
     });
     return instance;
 }
-/* harmony default export */ __webpack_exports__["a"] = (addMap);
-
+exports.default = addMap;
 
 /***/ }),
 /* 6 */
 /*!**********************!*\
   !*** ./src/utils.ts ***!
   \**********************/
-/*! exports provided: defaults */
-/*! exports used: defaults */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = defaults;
-function defaults(...sources) {
-    const destination = {};
-    for (const source of sources) {
-        if (source === null) {
-            continue;
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.defaults = defaults;
+function defaults() {
+    var destination = {};
+
+    for (var _len = arguments.length, sources = Array(_len), _key = 0; _key < _len; _key++) {
+        sources[_key] = arguments[_key];
+    }
+
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = sources[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var source = _step.value;
+
+            if (source === null) {
+                continue;
+            }
+            for (var key in source) {
+                if (!destination[key]) {
+                    destination[key] = source[key];
+                }
+            }
         }
-        for (const key in source) {
-            if (!destination[key]) {
-                destination[key] = source[key];
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
             }
         }
     }
+
     return destination;
 }
-
 
 /***/ }),
 /* 7 */
@@ -13924,76 +13990,108 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAApCAQAAAAC
 /*!*****************************!*\
   !*** ./src/render_paths.ts ***!
   \*****************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = renderPaths;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet__ = __webpack_require__(/*! leaflet */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_leaflet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__path_styles__ = __webpack_require__(/*! ./path_styles */ 10);
 
 
-const options = {
-    style: (feature) => {
-        const properties = feature.properties || {};
-        const activity = properties.activity;
-        let styleOptions = {};
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = renderPaths;
+
+var _leaflet = __webpack_require__(/*! leaflet */ 0);
+
+var _path_styles = __webpack_require__(/*! ./path_styles */ 10);
+
+var options = {
+    style: function style(feature) {
+        var properties = feature.properties || {};
+        var activity = properties.activity;
+        var styleOptions = {};
         if (!activity) {
             return styleOptions;
         }
-        const color = properties.color || __WEBPACK_IMPORTED_MODULE_1__path_styles__["a" /* colors */][activity] || "#fc0";
+        var color = properties.color || _path_styles.colors[activity] || "#fc0";
         styleOptions = {
-            color,
+            color: color,
             opacity: 0.65,
-            weight: 2,
+            weight: 2
         };
-        if (__WEBPACK_IMPORTED_MODULE_1__path_styles__["b" /* dashes */][activity]) {
-            styleOptions.dashArray = __WEBPACK_IMPORTED_MODULE_1__path_styles__["b" /* dashes */][activity];
+        if (_path_styles.dashes[activity]) {
+            styleOptions.dashArray = _path_styles.dashes[activity];
         }
         return styleOptions;
-    },
+    }
 };
 function renderPaths(geojson, map) {
-    const features = geojson.features;
-    const grouped = features.reduce((memo, feature) => {
-        const properties = feature.properties || {};
-        const key = properties.activity || "default";
+    var features = geojson.features;
+    var grouped = features.reduce(function (memo, feature) {
+        var properties = feature.properties || {};
+        var key = properties.activity || "default";
         if (!memo[key]) {
             memo[key] = [];
         }
         memo[key].push(feature);
         return memo;
     }, {});
-    for (const key of Object.keys(grouped)) {
-        const groupedFeatures = grouped[key];
-        const filtered = groupedFeatures.filter((feature) => feature.geometry.type !== "Point");
-        if (filtered.length === 0) {
-            continue;
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = Object.keys(grouped)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var key = _step.value;
+
+            var groupedFeatures = grouped[key];
+            var filtered = groupedFeatures.filter(function (feature) {
+                return feature.geometry.type !== "Point";
+            });
+            if (filtered.length === 0) {
+                continue;
+            }
+            // @note `geoJSON` can actually accept an array of `GeoJSONObject`s /
+            //   `Feature`s directly, but the type definition currently only accepts a
+            //   single object, so the array throws TS2345.
+            var overlayLayer = (0, _leaflet.layerGroup)(groupedFeatures.map(function (feature) {
+                return (0, _leaflet.geoJSON)(feature, options);
+            }));
+            map.addLayer(overlayLayer);
+            map.fire("addOverlayLayer", { overlayLayer: overlayLayer, key: key });
         }
-        // @note `geoJSON` can actually accept an array of `GeoJSONObject`s /
-        //   `Feature`s directly, but the type definition currently only accepts a
-        //   single object, so the array throws TS2345.
-        const overlayLayer = Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["layerGroup"])(groupedFeatures.map((feature) => {
-            return Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["geoJSON"])(feature, options);
-        }));
-        map.addLayer(overlayLayer);
-        map.fire("addOverlayLayer", { overlayLayer, key });
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
     }
 }
-
 
 /***/ }),
 /* 10 */
 /*!****************************!*\
   !*** ./src/path_styles.ts ***!
   \****************************/
-/*! exports provided: colors, dashes */
-/*! exports used: colors, dashes */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 /**
  * This list of colors is taken from the Moves documentation.
  *
@@ -14007,7 +14105,7 @@ function renderPaths(geojson, map) {
  *
  * @see https://dev.moves-app.com/docs/api_activity_list#activity_table
  */
-const colors = Object.freeze({
+var colors = exports.colors = Object.freeze({
     aerobics: "#bc4fff",
     airplane: "#848484",
     american_football: "#c93838",
@@ -14095,98 +14193,119 @@ const colors = Object.freeze({
     windsurfing: "#00a6ff",
     wrestling: "#fc6f0a",
     yoga: "#a655a3",
-    zumba: "#fa5788",
+    zumba: "#fa5788"
 });
-/* harmony export (immutable) */ __webpack_exports__["a"] = colors;
-
-const dashes = Object.freeze({
+var dashes = exports.dashes = Object.freeze({
     airplane: "5, 5, 1, 5",
     bus: "5, 5",
     car: "5, 5",
-    walking: "1, 1",
+    walking: "1, 1"
 });
-/* harmony export (immutable) */ __webpack_exports__["b"] = dashes;
-
-
 
 /***/ }),
 /* 11 */
 /*!******************************!*\
   !*** ./src/render_points.ts ***!
   \******************************/
-/*! exports provided: default */
-/*! exports used: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! dynamic exports provided */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = renderPoints;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet__ = __webpack_require__(/*! leaflet */ 0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_leaflet___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_leaflet__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_supercluster__ = __webpack_require__(/*! supercluster */ 12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_supercluster___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_supercluster__);
 
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = renderPoints;
+
+var _leaflet = __webpack_require__(/*! leaflet */ 0);
+
+var _supercluster = __webpack_require__(/*! supercluster */ 12);
+
+var _supercluster2 = _interopRequireDefault(_supercluster);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function handleSinglePoint(feature, latlng) {
-    const mark = Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["marker"])(latlng);
-    const properties = feature.properties || {};
+    var mark = (0, _leaflet.marker)(latlng);
+    var properties = feature.properties || {};
     if (properties.place && properties.place.name) {
         mark.bindPopup(properties.place.name);
     }
     return mark;
 }
 function handleClusteredPoint(feature, latlng) {
-    const count = feature.properties.point_count;
-    let size;
+    var count = feature.properties.point_count;
+    var size = void 0;
     if (count < 100) {
         size = "small";
-    }
-    else if (count < 1000) {
+    } else if (count < 1000) {
         size = "medium";
-    }
-    else {
+    } else {
         size = "large";
     }
-    const icon = Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["divIcon"])({
-        className: `marker-cluster marker-cluster-${size}`,
-        html: `<div><span>${feature.properties.point_count_abbreviated}</span></div>`,
-        iconSize: Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["point"])(40, 40),
+    var icon = (0, _leaflet.divIcon)({
+        className: "marker-cluster marker-cluster-" + size,
+        html: "<div><span>" + feature.properties.point_count_abbreviated + "</span></div>",
+        iconSize: (0, _leaflet.point)(40, 40)
     });
-    return Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["marker"])(latlng, { icon });
+    return (0, _leaflet.marker)(latlng, { icon: icon });
 }
-const options = {
-    filter: (feature) => feature.geometry.type === "Point",
-    pointToLayer(feature, latlng) {
+var options = {
+    filter: function filter(feature) {
+        return feature.geometry.type === "Point";
+    },
+    pointToLayer: function pointToLayer(feature, latlng) {
         if (feature.properties.cluster) {
             return handleClusteredPoint(feature, latlng);
-        }
-        else {
+        } else {
             return handleSinglePoint(feature, latlng);
         }
-    },
+    }
 };
-const markers = Object(__WEBPACK_IMPORTED_MODULE_0_leaflet__["geoJSON"])(null, options);
+var markers = (0, _leaflet.geoJSON)(null, options);
 function updateVisiblePoints(map, cluster) {
-    const bounds = map.getBounds();
-    const bbox = [
-        bounds.getWest(),
-        bounds.getSouth(),
-        bounds.getEast(),
-        bounds.getNorth(),
-    ];
-    const visible = cluster.getClusters(bbox, map.getZoom());
+    var bounds = map.getBounds();
+    var bbox = [bounds.getWest(), bounds.getSouth(), bounds.getEast(), bounds.getNorth()];
+    var visible = cluster.getClusters(bbox, map.getZoom());
     markers.clearLayers();
-    for (const feature of visible) {
-        markers.addData(feature);
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = visible[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var feature = _step.value;
+
+            markers.addData(feature);
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
     }
 }
 function renderPoints(geojson, map) {
     markers.addTo(map);
-    const cluster = __WEBPACK_IMPORTED_MODULE_1_supercluster___default()({}).load(geojson.features);
-    map.on("moveend", () => updateVisiblePoints(map, cluster));
-    map.on("zoomend", () => updateVisiblePoints(map, cluster));
+    var cluster = (0, _supercluster2.default)({}).load(geojson.features);
+    map.on("moveend", function () {
+        return updateVisiblePoints(map, cluster);
+    });
+    map.on("zoomend", function () {
+        return updateVisiblePoints(map, cluster);
+    });
     updateVisiblePoints(map, cluster);
 }
-
 
 /***/ }),
 /* 12 */
@@ -14194,7 +14313,7 @@ function renderPoints(geojson, map) {
   !*** ./node_modules/supercluster/index.js ***!
   \********************************************/
 /*! dynamic exports provided */
-/*! exports used: default */
+/*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

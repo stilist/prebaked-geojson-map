@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Move browserslist config outside webpack config
 - Move Babel config outside webpack config
 - Enable awesome-typescript-loader caching
+- Babel now recompiles TypeScript’s output using browserslist data
 
 ### Fixed
 - Fix `##` that should be `###` in change log
