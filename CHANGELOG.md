@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Add `.md` extension to `CHANGELOG`
 - Update npm dependencies
-- Change browserlist config to use regional data for feature support -- this package should work with any browsers Leaflet supports (http://leafletjs.com#features)
+- Move browserslist config outside webpack config
 
 ### Fixed
 - Fix `##` that should be `###` in change log

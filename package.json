@@ -50,7 +50,7 @@
     "src/"
   ],
   "scripts": {
-    "build": "webpack --progress --config config/webpack.js",
+    "build": "BROWSERSLIST_CONFIG=./config/browserslist webpack --progress --config config/webpack.js",
     "build:analyze": "WEBPACK_ANALYZE=true npm run build -- --profile",
     "prebuild:release": "npm run lint",
     "build:release": "NODE_ENV=production npm run build",

@@ -4,9 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ZopfliPlugin = require('zopfli-webpack-plugin')
 
-const regions = 'AF AN AS EU NA OC SA WW'.split(' ')
-const browserlist = regions.map(region => `> 5% in alt-${region}`)
-
 const config = {
   entry: {
     'index': './src/index.ts',
@@ -41,17 +38,7 @@ const config = {
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [[
-            'env',
-            {
-              browsers: browserlist,
-            },
-          ]],
-        },
-      }],
+      use: ['babel-loader'],
     }, {
       test: /\.css$/,
       use: ExtractTextPlugin.extract({
@@ -59,9 +46,6 @@ const config = {
         use: [{
           loader: 'css-loader',
           options: {
-            autoprefixer: {
-              browsers: browserlist,
-            },
             minimize: true,
           },
         }],
