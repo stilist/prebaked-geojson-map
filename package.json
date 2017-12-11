@@ -50,9 +50,11 @@
     "src/"
   ],
   "scripts": {
-    "build": "npm run lint && webpack --progress --config config/webpack.js",
-    "build:analyze": "WEBPACK_ANALYZE=true webpack --profile --progress --config config/webpack.js",
-    "build:watch": "webpack --progress --watch --config config/webpack.js",
+    "build": "webpack --progress --config config/webpack.js",
+    "build:analyze": "WEBPACK_ANALYZE=true npm run build -- --profile",
+    "prebuild:release": "npm run lint",
+    "build:release": "npm run build",
+    "build:watch": "npm run build -- --watch",
     "lint": "tslint --fix --config ./config/tslint.json --project ./config/tsconfig.json"
   }
 }
