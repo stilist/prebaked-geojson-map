@@ -34,6 +34,7 @@ const config = {
         options: {
           configFileName: 'config/tsconfig.json',
           useBabel: true,
+          useCache: true,
         },
       }],
     }, {
