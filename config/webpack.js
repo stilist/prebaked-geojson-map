@@ -66,11 +66,11 @@ const config = {
       sourceMap: true,
     }),
     new ZopfliPlugin({
-        asset: '[path].gz[query]',
-        algorithm: 'zopfli',
-        test: /\.(css|js|map)$/,
-        threshold: 10240,
-        minRatio: 0.8
+      asset: '[path].gz[query]',
+      algorithm: 'zopfli',
+      minRatio: 0.8,
+      test: /\.(css|js|map)$/,
+      threshold: 10240,
     }),
   ],
 }
