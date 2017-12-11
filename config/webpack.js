@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
@@ -86,9 +85,6 @@ const config = {
         test: /\.(css|js|map)$/,
         threshold: 10240,
         minRatio: 0.8
-    }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
     }),
   ],
 }

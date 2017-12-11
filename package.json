@@ -53,7 +53,7 @@
     "build": "webpack --progress --config config/webpack.js",
     "build:analyze": "WEBPACK_ANALYZE=true npm run build -- --profile",
     "prebuild:release": "npm run lint",
-    "build:release": "npm run build",
+    "build:release": "NODE_ENV=production npm run build",
     "build:watch": "npm run build -- --watch",
     "lint": "tslint --fix --config ./config/tslint.json --project ./config/tsconfig.json"
   }
