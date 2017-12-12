@@ -1,5 +1,6 @@
 const path = require('path')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+const DtsBundle = require('dts-bundle-webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const ZopfliPlugin = require('zopfli-webpack-plugin')
@@ -31,10 +32,8 @@ const config = {
       test: /\.ts$/,
       use: [{
         loader: 'awesome-typescript-loader',
-        options: {
-          configFileName: 'config/tsconfig.json',
-          useBabel: true,
-          useCache: true,
+        query: {
+          configFileName: './config/tsconfig.json',
         },
       }],
     }, {
@@ -78,6 +77,15 @@ const config = {
 
 if (process.env.WEBPACK_ANALYZE === 'true') {
   config.plugins.push(new BundleAnalyzerPlugin())
+}
+if (process.env.NODE_ENV === 'production') {
+  const dts = new DtsBundle({
+    main: 'dist/index.d.ts',
+    name: 'prebaked-geojson-map',
+    referenceExternals: true,
+    removeSource: true,
+  })
+  config.plugins.push(dts)
 }
 
 module.exports = config

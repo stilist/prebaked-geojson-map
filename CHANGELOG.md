@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Add gzip-compressed version of `dist/` files
 - Add webpack-bundle-analyzer plugin
+- Include TypeScript definition file
 
 ### Changed
 - Add `.md` extension to `CHANGELOG`

@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "../dist/",
     "module": "esnext",
     "noImplicitAny": true,
-    "outDir": "../dist/",
+    "outDir": "../tmp/",
     "sourceMap": true,
     "target": "es2017"
   },
   "include": [
     "../src/*"
-  ]
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true,
+    "useCache": true
+  }
 }

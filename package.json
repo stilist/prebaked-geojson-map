@@ -58,5 +58,8 @@
   },
   "babel": {
     "extends": "./config/babel.json"
+  },
+  "typescript": {
+    "definition": "dist/prebaked-geojson-map.d.ts"
   }
 }
