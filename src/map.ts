@@ -3,6 +3,7 @@ import {
   icon,
   Layer,
   map,
+  Map,
   MapOptions,
   Marker,
 } from "leaflet";
@@ -32,7 +33,7 @@ const defaultOptions = Object.freeze({
   maxZoom: 18,
   zoom: 5,
 });
-function addMap(id: string = "map", options: MapOptions = {}) {
+function addMap(id: string = "map", options: MapOptions = {}): Map {
   let el = document.getElementById(id);
   if (el === null) {
     el = document.createElement("div");

@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - Fix `##` that should be `###` in change log
 - Fix several minor copy errors
+- Fix TypeScript compile errors revealed by running `tsc` directly
 
 ## [1.0.4] - 2017-11-25
 ### Added
