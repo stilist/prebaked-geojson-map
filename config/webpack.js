@@ -33,7 +33,9 @@ const config = {
       use: ['babel-loader', {
         loader: 'ts-loader',
         options: {
-          configFile: 'config/tsconfig.json',
+          configFile: process.env.NODE_ENV === 'production'
+                      ? 'config/tsconfig.production.json'
+                      : 'config/tsconfig.json',
         },
       }],
     }, {
