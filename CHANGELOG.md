@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Move Babel config outside webpack config
 - Babel now recompiles TypeScript’s output using browserslist data
 - Switch from awesome-typescript-loader to ts-loader
+- Scope most plugins to production environment
 
 ### Fixed
 - Fix `##` that should be `###` in change log

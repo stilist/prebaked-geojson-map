@@ -1,9 +1,5 @@
 const path = require('path')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
-const DtsBundle = require('dts-bundle-webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-const ZopfliPlugin = require('zopfli-webpack-plugin')
 
 const config = {
   entry: {
@@ -68,6 +64,25 @@ const config = {
   devtool: 'source-map',
   plugins: [
     new ExtractTextPlugin('index.css'),
+  ],
+}
+
+if (process.env.WEBPACK_ANALYZE === 'true') {
+  const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+  config.plugins.push(new BundleAnalyzerPlugin())
+}
+if (process.env.NODE_ENV === 'production') {
+  const DtsBundle = require('dts-bundle-webpack')
+  const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+  const ZopfliPlugin = require('zopfli-webpack-plugin')
+
+  const productionPlugins = [
+    new DtsBundle({
+      main: 'dist/index.d.ts',
+      name: 'prebaked-geojson-map',
+      referenceExternals: true,
+      removeSource: true,
+    }),
     new UglifyJSPlugin({
       include: /\.min\.js$/,
       sourceMap: true,
@@ -79,20 +94,8 @@ const config = {
       test: /\.(css|js|map)$/,
       threshold: 10240,
     }),
-  ],
-}
-
-if (process.env.WEBPACK_ANALYZE === 'true') {
-  config.plugins.push(new BundleAnalyzerPlugin())
-}
-if (process.env.NODE_ENV === 'production') {
-  const dts = new DtsBundle({
-    main: 'dist/index.d.ts',
-    name: 'prebaked-geojson-map',
-    referenceExternals: true,
-    removeSource: true,
-  })
-  config.plugins.push(dts)
+  ]
+  config.plugins = config.plugins.concat(productionPlugins)
 }
 
 module.exports = config
