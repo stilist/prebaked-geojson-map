@@ -10,9 +10,5 @@
   },
   "include": [
     "../src/*"
-  ],
-  "awesomeTypescriptLoaderOptions": {
-    "useBabel": true,
-    "useCache": true
-  }
+  ]
 }

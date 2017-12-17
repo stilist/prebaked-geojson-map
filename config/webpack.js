@@ -30,10 +30,10 @@ const config = {
   module: {
     rules: [{
       test: /\.ts$/,
-      use: [{
-        loader: 'awesome-typescript-loader',
-        query: {
-          configFileName: './config/tsconfig.json',
+      use: ['babel-loader', {
+        loader: 'ts-loader',
+        options: {
+          configFile: 'config/tsconfig.json',
         },
       }],
     }, {
