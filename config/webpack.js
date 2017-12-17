@@ -30,14 +30,18 @@ const config = {
   module: {
     rules: [{
       test: /\.ts$/,
-      use: ['babel-loader', {
-        loader: 'ts-loader',
-        options: {
-          configFile: process.env.NODE_ENV === 'production'
-                      ? 'config/tsconfig.production.json'
-                      : 'config/tsconfig.json',
-        },
-      }],
+      use: [
+        'cache-loader',
+        'babel-loader',
+        {
+          loader: 'ts-loader',
+          options: {
+            configFile: process.env.NODE_ENV === 'production'
+                        ? 'config/tsconfig.production.json'
+                        : 'config/tsconfig.json',
+          },
+        }
+      ],
     }, {
       test: /\.js$/,
       exclude: /node_modules/,

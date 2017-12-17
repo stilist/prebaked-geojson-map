@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add gzip-compressed version of `dist/` files
 - Add webpack-bundle-analyzer plugin
 - Include TypeScript definition file
+- Use cache-loader with ts-loader
 
 ### Changed
 - Add `.md` extension to `CHANGELOG`

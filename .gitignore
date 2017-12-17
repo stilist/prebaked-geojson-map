@@ -1,5 +1,5 @@
 .DS_Store
 
-.awcache
+/.cache-loader/
 node_modules/
 tmp/
