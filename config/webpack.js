@@ -48,9 +48,10 @@ const config = {
       use: ['babel-loader'],
     }, {
       test: /\.css$/,
+      exclude: /node_modules/,
       use: ExtractTextPlugin.extract({
         fallback: 'style-loader',
-        use: [{
+        use: ['cache-loader', {
           loader: 'css-loader',
           options: {
             minimize: true,
