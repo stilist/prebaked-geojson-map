@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Add missing `node-zopfli` dependency
 
+### Changed
+- Upgrade `typescript` dependency
+
 ## [1.0.5] - 2017-12-16
 ### Added
 - Add gzip-compressed version of `dist/` files
