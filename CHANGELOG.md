@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add `strictPropertyInitialization` compiler flag from TypeScript 2.7
 
 ### Changed
-- Upgrade `@types/leaflet`, `tslint`, and `typescript` dependencies
+- Upgrade `@types/leaflet`, `@types/node`, `tslint`, and `typescript` dependencies
 
 ## [1.0.5] - 2017-12-16
 ### Added
