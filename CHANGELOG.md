@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Added
 - Add missing `node-zopfli` dependency
+- Add `strictPropertyInitialization` compiler flag from TypeScript 2.7
 
 ### Changed
 - Upgrade `typescript` dependency
