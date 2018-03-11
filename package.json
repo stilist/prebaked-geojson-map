@@ -34,7 +34,7 @@
     "node-zopfli": "^2.0.2",
     "source-map-loader": "^0.2.0",
     "style-loader": "^0.19.1",
-    "supercluster": "^3.0.0",
+    "supercluster": "^3.0.2",
     "ts-loader": "^3.2.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2",
