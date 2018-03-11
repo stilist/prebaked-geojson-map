@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.0.6] - 2018-03-11
 ### Added
 - Add missing `node-zopfli` dependency
 - Add `strictPropertyInitialization` compiler flag from TypeScript 2.7
@@ -87,7 +89,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.5...master
+[Unreleased]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.6...master
+[1.0.6]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.3...v1.0.4
 [1.0.3]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.2...v1.0.3
