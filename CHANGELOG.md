@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add `strictPropertyInitialization` compiler flag from TypeScript 2.7
 
 ### Changed
-- Upgrade `@types/leaflet`, `@types/node`, `babel-loader`, `css-loader`, `file-loader`, `leaflet`, `style-loader`, `supercluster`, `ts-loader`, `tslint`, `typescript`, `uglifyjs-webpack-plugin`, and `url-loader` dependencies
+- Upgrade `@types/leaflet`, `@types/node`, `babel-loader`, `css-loader`, `file-loader`, `leaflet`, `style-loader`, `supercluster`, `ts-loader`, `tslint`, `typescript`, `uglifyjs-webpack-plugin`, `url-loader`, and `webpack-bundle-analyzer` dependencies
 
 ## [1.0.5] - 2017-12-16
 ### Added
