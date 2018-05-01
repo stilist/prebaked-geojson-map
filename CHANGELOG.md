@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Update `package-lock.json` with npm 6
 
 ## [1.0.6] - 2018-03-11
 ### Added
