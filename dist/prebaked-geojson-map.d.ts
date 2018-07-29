@@ -10,7 +10,7 @@ declare module 'prebaked-geojson-map' {
     import add from "prebaked-geojson-map/map";
     import renderPaths from "prebaked-geojson-map/render_paths";
     import renderPoints from "prebaked-geojson-map/render_points";
-    export { add, tileLayer as addLayer, renderPaths, renderPoints, namedTileLayers };
+    export { add, tileLayer as addLayer, renderPaths, renderPoints, namedTileLayers, };
 }
 
 declare module 'prebaked-geojson-map/layers' {
