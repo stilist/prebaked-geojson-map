@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Refactor webpack config files for webpack 4 syntax, and split into separate `dev` and `prod` files [per documentation](https://webpack.js.org/guides/production/#specify-the-mode)
 - Replace `zopfli-webpack-plugin` with `compression-webpack-plugin` -- `zopfli-webpack-plugin` depends on the `zopfli-node` package, which is unmaintained and doesn't seem to compile (see https://github.com/webpack-contrib/zopfli-webpack-plugin/pull/14)
 - Update `package-lock.json` with npm 6
-- Upgrade `@types/leaflet`, `@types/node`, `babel-core`, `babel-laoder`, `babel-preset-env`, `css-loader`, `leaflet`, `style-loader`, `supercluster`, `tslint`, `typescript`, `uglifyjs-webpack-plugin` and `webpack-bundle-analyzer` dependencies
+- Upgrade `@types/leaflet`, `@types/node`, `babel-core`, `babel-loader`, `babel-preset-env`, `css-loader`, `leaflet`, `style-loader`, `supercluster`, `tslint`, `typescript`, `uglifyjs-webpack-plugin` and `webpack-bundle-analyzer` dependencies
 
 ## [1.0.6] - 2018-03-11
 ### Added
