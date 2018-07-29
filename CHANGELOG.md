@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Changed
 - Update `package-lock.json` with npm 6
-- Upgrade `@types/leaflet`, `@types/node`, `babel-core`, `css-loader`, `leaflet`, `style-loader`, `supercluster`, `typescript`, and `uglifyjs-webpack-plugin` dependencies
+- Upgrade `@types/leaflet`, `@types/node`, `babel-core`, `babel-laoder`, `babel-preset-env`, `css-loader`, `leaflet`, `style-loader`, `supercluster`, `typescript`, and `uglifyjs-webpack-plugin` dependencies
 
 ## [1.0.6] - 2018-03-11
 ### Added
