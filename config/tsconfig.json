@@ -4,7 +4,6 @@
     "noImplicitAny": true,
     "outDir": "../tmp/",
     "sourceMap": true,
-    "strictPropertyInitialization": true,
     "target": "es2017"
   },
   "include": [
