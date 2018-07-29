@@ -19,8 +19,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@types/leaflet": "^1.2.7",
-    "@types/node": "^10.0.2",
+    "@types/leaflet": "^1.2.9",
+    "@types/node": "^10.5.4",
     "@types/supercluster": "^3.0.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
