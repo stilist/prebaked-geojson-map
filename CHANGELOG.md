@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.0.7] - 2018-07-29
 ### Changed
 - Upgrade to webpack 4
 - Refactor webpack config files for webpack 4 syntax, and split into separate `dev` and `prod` files [per documentation](https://webpack.js.org/guides/production/#specify-the-mode)
@@ -95,7 +97,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.6...master
+[Unreleased]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.7...master
+[1.0.7]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.3...v1.0.4
