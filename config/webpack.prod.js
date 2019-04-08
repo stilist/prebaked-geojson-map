@@ -47,7 +47,7 @@ module.exports = merge.smart(common, {
       threshold: 10240,
     }),
     new DtsBundle({
-      main: 'dist/index.d.ts',
+      main: 'dist/prebaked-geojson-map.d.ts',
       name: 'prebaked-geojson-map',
       referenceExternals: true,
       removeSource: true,
