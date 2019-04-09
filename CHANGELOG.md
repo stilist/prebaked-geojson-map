@@ -5,8 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Changed
+- Upgrade to Babel 7
+- Replace the deprecated `webpack-command` dependency with the `webpack-cli` dependency (see https://github.com/webpack-contrib/webpack-command/commit/be83d805be69b7e2495f13e2b09a0c5092569190)
+- Upgrade `@types/node`, `babel-loader`, `cache-loader`, `compression-webpack-plugin`, `css-loader`, `file-loader`, `leaflet`, `mini-css-extract-plugin`, `style-loader`, `ts-loader`, `typescript`, `uglifyjs-webpack-plugin`, `webpack`, `webpack-bundle-analyzer`, and `webpack-merge` dependencies
+
 ### Fixed
-- `dev` webpack config didn't declare `module.exports`
+- `dev` webpack config didn’t declare `module.exports`
+- The `build:analyze` script didn’t declare a webpack mode; now it extends the `build:check` script, which uses development mode
 
 ## [1.0.7] - 2018-07-29
 ### Changed
