@@ -7,20 +7,36 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [Unreleased]
 ### Changed
 - Upgrade to Babel 7
-- Replace the deprecated `webpack-command` dependency with the `webpack-cli` dependency (see https://github.com/webpack-contrib/webpack-command/commit/be83d805be69b7e2495f13e2b09a0c5092569190)
-- Upgrade `@types/node`, `babel-loader`, `cache-loader`, `compression-webpack-plugin`, `css-loader`, `file-loader`, `leaflet`, `mini-css-extract-plugin`, `style-loader`, `ts-loader`, `typescript`, `uglifyjs-webpack-plugin`, `webpack`, `webpack-bundle-analyzer`, and `webpack-merge` dependencies
+- Replace the deprecated `webpack-command` dependency with the `webpack-cli`
+  dependency (see
+  https://github.com/webpack-contrib/webpack-command/commit/be83d805be69b7e2495f13e2b09a0c5092569190)
+- Upgrade `@types/node`, `babel-loader`, `cache-loader`,
+  `compression-webpack-plugin`, `css-loader`, `file-loader`, `leaflet`,
+  `mini-css-extract-plugin`, `style-loader`, `ts-loader`, `typescript`,
+  `uglifyjs-webpack-plugin`, `webpack`, `webpack-bundle-analyzer`, and
+  `webpack-merge` dependencies
+- Tweak `CHANGELOG.md` formatting to always use line breaks for long lines
 
 ### Fixed
 - `dev` webpack config didn’t declare `module.exports`
-- The `build:analyze` script didn’t declare a webpack mode; now it extends the `build:check` script, which uses development mode
+- The `build:analyze` script didn’t declare a webpack mode; now it extends the
+  `build:check` script, which uses development mode
 
 ## [1.0.7] - 2018-07-29
 ### Changed
 - Upgrade to webpack 4
-- Refactor webpack config files for webpack 4 syntax, and split into separate `dev` and `prod` files [per documentation](https://webpack.js.org/guides/production/#specify-the-mode)
-- Replace `zopfli-webpack-plugin` with `compression-webpack-plugin` -- `zopfli-webpack-plugin` depends on the `zopfli-node` package, which is unmaintained and doesn't seem to compile (see https://github.com/webpack-contrib/zopfli-webpack-plugin/pull/14)
+- Refactor webpack config files for webpack 4 syntax, and split into separate
+  `dev` and `prod` files
+  [per documentation](https://webpack.js.org/guides/production/#specify-the-mode)
+- Replace `zopfli-webpack-plugin` with `compression-webpack-plugin` --
+  `zopfli-webpack-plugin` depends on the `zopfli-node` package, which is
+  unmaintained and doesn't seem to compile (see
+  https://github.com/webpack-contrib/zopfli-webpack-plugin/pull/14)
 - Update `package-lock.json` with npm 6
-- Upgrade `@types/leaflet`, `@types/node`, `babel-core`, `babel-loader`, `babel-preset-env`, `css-loader`, `leaflet`, `style-loader`, `supercluster`, `tslint`, `typescript`, `uglifyjs-webpack-plugin` and `webpack-bundle-analyzer` dependencies
+- Upgrade `@types/leaflet`, `@types/node`, `babel-core`, `babel-loader`,
+  `babel-preset-env`, `css-loader`, `leaflet`, `style-loader`, `supercluster`,
+  `tslint`, `typescript`, `uglifyjs-webpack-plugin`, and
+  `webpack-bundle-analyzer` dependencies
 
 ## [1.0.6] - 2018-03-11
 ### Added
@@ -28,7 +44,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Add `strictPropertyInitialization` compiler flag from TypeScript 2.7
 
 ### Changed
-- Upgrade `@types/leaflet`, `@types/node`, `babel-loader`, `cache-loader`, `css-loader`, `file-loader`, `leaflet`, `style-loader`, `supercluster`, `ts-loader`, `tslint`, `typescript`, `uglifyjs-webpack-plugin`, `url-loader`, `webpack`, and `webpack-bundle-analyzer` dependencies
+- Upgrade `@types/leaflet`, `@types/node`, `babel-loader`, `cache-loader`,
+  `css-loader`, `file-loader`, `leaflet`, `style-loader`, `supercluster`,
+  `ts-loader`, `tslint`, `typescript`, `uglifyjs-webpack-plugin`, `url-loader`,
+  `webpack`, and `webpack-bundle-analyzer` dependencies
 
 ## [1.0.5] - 2017-12-16
 ### Added
