@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [1.1.0] - 2019-04-08
 ### Changed
 - Upgrade to Babel 7
 - Replace the deprecated `webpack-command` dependency with the `webpack-cli`
@@ -16,6 +18,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   `uglifyjs-webpack-plugin`, `webpack`, `webpack-bundle-analyzer`, and
   `webpack-merge` dependencies
 - Tweak `CHANGELOG.md` formatting to always use line breaks for long lines
+- Update minor version number to reflect upgrade from `leaflet` 1.3 to
+  `leaflet` 1.4
 
 ### Fixed
 - `dev` webpack config didn’t declare `module.exports`
@@ -124,7 +128,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial release
 
-[Unreleased]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.7...master
+[Unreleased]: https://github.com/stilist/prebaked-geojson-map/compare/v1.1.0...master
+[1.1.0]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.7...1.1.0
 [1.0.7]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/stilist/prebaked-geojson-map/compare/v1.0.4...v1.0.5
