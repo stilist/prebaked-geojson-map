@@ -55,7 +55,7 @@
   "scripts": {
     "build": "BROWSERSLIST_CONFIG=./config/browserslist webpack --progress",
     "build:check": "npm run build -- --config config/webpack.dev.js",
-    "build:analyze": "WEBPACK_ANALYZE=true npm run build -- --profile",
+    "build:analyze": "WEBPACK_ANALYZE=true npm run build:check -- --profile",
     "prebuild:release": "npm run lint",
     "build:release": "npm run build -- --config config/webpack.prod.js",
     "build:watch": "npm run build:check -- --watch",
