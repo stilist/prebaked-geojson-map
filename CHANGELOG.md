@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Fixed
-- Upgrade `kind-of`, `minimist`, and `set-value` packages to address vulnerabilities
+- Upgrade `compression-webpack-plugin`, `kind-of`, `minimist`, `serialize-javascript`, and `set-value` packages to address vulnerabilities
 
 ## [1.1.0] - 2019-04-08
 ### Changed
