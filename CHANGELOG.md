@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- Upgrade `kind-of` package to address vulnerability
 
 ## [1.1.0] - 2019-04-08
 ### Changed

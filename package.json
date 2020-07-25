@@ -52,6 +52,9 @@
     "example/",
     "src/"
   ],
+  "resolutions": {
+    "kind-of": ">=6.0.3"
+  },
   "scripts": {
     "build": "BROWSERSLIST_CONFIG=./config/browserslist webpack --progress",
     "build:check": "npm run build -- --config config/webpack.dev.js",
