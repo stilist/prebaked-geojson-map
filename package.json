@@ -53,7 +53,8 @@
     "src/"
   ],
   "resolutions": {
-    "kind-of": ">=6.0.3"
+    "kind-of": ">=6.0.3",
+    "minimist": ">=1.2.3"
   },
   "scripts": {
     "build": "BROWSERSLIST_CONFIG=./config/browserslist webpack --progress",

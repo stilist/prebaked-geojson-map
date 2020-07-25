@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Fixed
-- Upgrade `kind-of` package to address vulnerability
+- Upgrade `kind-of` and `minimist` packages to address vulnerabilities
 
 ## [1.1.0] - 2019-04-08
 ### Changed
